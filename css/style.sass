@@ -1,0 +1,437 @@
+@import vars
+*
+    margin: 0
+    padding: 0
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+body
+    font-family: 'Lato', sans-serif
+
+a
+    text-decoration: none
+
+summary
+    display: block
+    outline-style: none
+
+summary::-webkit-details-marker
+    display: none
+
+.center
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+
+.header
+    background: $selectFon
+    height: 75px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    &__search
+        margin-left: 41px
+
+    &__search:hover .search__img path
+        fill: $selectColor
+
+    &__icon
+        &:not(:last-child)
+            margin-right: 33px
+        &__mob
+            display: none
+            &__:hover .icon__img path
+                fill: $selectColor
+
+    &__icon:hover .icon__img path
+        fill: $selectColor
+.nav
+    background-color: #fff
+    padding: 16px 16px 32px 32px
+    position: absolute
+    top: 75px
+    right: 0
+    width: 25vw
+    box-sizing: border-box
+    transition: right .3s
+    list-style-type: none
+    z-index: 2
+    &__heading
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+
+    &__catalog
+        list-style-type: none
+        font-size: 14px
+        line-height: 17px
+        color: $selectColor
+
+        &__list
+            padding-left: 21px
+
+    &__img
+        padding-left: 95%
+    &__linc
+        padding-top: 12px
+        list-style-type: none
+        &__text
+            font-size: 14px
+            line-height: 17px
+            color: #6F6E6E
+
+    &__block
+        padding-top: 20px
+#switcher
+    display: none
+    &:checked ~ .nav
+        right: - 100%
+
+.promo
+    background: #F1E4E6
+    display: flex
+    padding-left: calc(50% - 800px)
+    padding-right: calc(50% - 800px)
+
+    &__img
+        width: 50%
+
+    &__photo
+        width: 100%
+
+    &__h1
+        font-family: Lato
+        font-style: normal
+        font-weight: 900
+        font-size: 48px
+        line-height: 58px
+        color: $selectFon
+
+    &__h2
+        font-family: Lato
+        font-style: normal
+        font-weight: 700
+        font-size: 32px
+        line-height: 38px
+        color: $selectFon
+
+    &__h2__select
+        color: $selectColor
+
+    &__text
+        padding-top: 20%
+
+    &__content
+        padding-left: 16px
+        border-left: 12px solid $selectColor
+
+.sale
+    padding-top: 64px
+    padding-bottom: 96px
+
+    &__top
+        display: flex
+        gap: 30px
+
+    &__item
+        height: 260px
+        flex-grow: 1
+        background-position: center
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    &__item__1
+        background-image: url(../img/Group36.jpg)
+
+    &__item__2
+        background-image: url(../img/Group37.jpg)
+
+    &__item__3
+        background-image: url(../img/Group38.jpg)
+
+    &__link:hover
+        transform: scale(1.2)
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        color: #FFFFFF
+
+    &__heading
+        font-style: normal
+        font-weight: 700
+        font-size: 24px
+        line-height: 28px
+        text-align: center
+        color: $selectColor
+
+    &__bottom
+        height: 180px
+        background-image: url(../img/Group39.jpg)
+        background-position: center
+        margin-top: 30px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    &__link
+        text-decoration: none
+
+.featured
+    text-align: center
+
+    &__h3
+        font-style: normal
+        font-weight: normal
+        font-size: 30px
+        line-height: 36px
+        color: $selectFon
+        margin-bottom: 6px
+
+    &__text
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        color: #9F9F9F
+
+.product
+    display: flex
+    flex-wrap: wrap
+    margin-top: 48px
+    gap: 30px
+
+    &__box
+        width: 360px
+        background-image: url(../img/cardfon.png)
+
+        &:hover
+            transform: scale(1.1)
+
+    &__add
+        position: absolute
+        top: 188px
+        left: 110px
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+        border: 1px solid #FFFFFF
+        width: 138px
+        height: 42px
+        display: none
+        justify-content: center
+        align-items: center
+        text-decoration: none
+    &__add__cart
+        padding-right: 11px
+    &__link
+        text-decoration: none
+    &__box:hover .product__img
+        filter: brightness(0.5)
+    &__box:hover .product__add
+        display: flex
+
+    &__heading
+        padding-top: 24px
+        font-style: normal
+        font-weight: normal
+        font-size: 13px
+        line-height: 16px
+        color: #000000
+
+    &__text
+        font-style: normal
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #5D5D5D
+        padding-top: 12px
+        padding-bottom: 18px
+
+    &__price
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 19px
+        color: $selectColor
+        padding-bottom: 20px
+
+    &__button
+        margin-top: 48px
+        margin-bottom: 94px
+        text-align: center
+
+    &__button__text
+        border: 1px solid #FF6A6A
+        padding: 14px 38px
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 19px
+        color: #F26376
+        text-decoration: none
+
+    &__button__text:hover
+        color: #FFFFFF
+        background: $selectColor
+
+.benefit
+
+    background: $selectFon
+    display: flex
+    padding-top: 104px
+    padding-bottom: 104px
+    gap: $gap
+
+    &__block
+
+        width: $widtcSite / 3 - $gap
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+
+    &__heading
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        color: #FBFBFB
+        padding-top: 25px
+        padding-bottom: 16px
+
+    &__text
+        font-style: normal
+        font-weight: 300
+        font-size: 13.972px
+        line-height: 17px
+        text-align: center
+        color: #FBFBFB
+
+.footer
+    height: 448px
+    background-image: url(../img/footfon.jpg)
+    background-repeat: no-repeat
+    background-position: center bottom
+    background-size: cover
+    display: flex
+    justify-content: space-between
+
+    &__left
+        display: flex
+        flex-direction: column
+        text-align: center
+        width: 50%
+
+    &__left__text
+        font-style: normal
+        font-weight: normal
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        color: #222224
+
+    &__left__img
+        padding-top: 86px
+        height: 128px
+
+    &__right
+        display: flex
+        flex-direction: column
+        text-align: center
+        width: 50%
+
+    &__right__heading
+        font-style: normal
+        font-weight: 700
+        font-size: 24px
+        line-height: 38px
+        text-align: center
+        color: #222224
+        padding-top: 150px
+
+    &__right__text
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 30px
+        text-align: center
+        color: #222224
+        padding-bottom: 32px
+
+    &__form
+        height: 48px
+        display: flex
+        justify-content: center
+
+    &__right__inp
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        display: flex
+        align-items: center
+        color: #222224
+        opacity: 0.67
+        border-radius: 16px 0 0 16px
+        width: 250px
+        border: none
+
+    &__right__butt
+        border-radius: 0 16px 16px 0
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        align-items: center
+        text-align: center
+        color: #FFFFFF
+        background: $selectColor
+        width: 100px
+        border: none
+
+    &__right__butt:hover
+        background: #E05C6E
+
+.foot
+    height: 80px
+    background: #222224
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &__left__text
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 19px
+        color: #FBFBFB
+
+    &__bot__right
+        gap: 8px
+        display: flex
+        text-align: center
+
+    &__icon
+        background: #FFFFFF
+        padding: 8px 9px
+        width: 23px
+
+    &__icon:hover
+        background: $selectColor
+
+    &__icon:hover .foot__img path
+        fill: white
+
+@import catalog
+@import product
+@import cart
+@import reception
+@import tablet
+@import phone

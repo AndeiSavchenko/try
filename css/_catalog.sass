@@ -1,0 +1,164 @@
+.breadcrumbs
+    height: 148px
+    background: #F8F3F4
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &__linc
+        text-decoration: none
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #636363
+        &:hover
+            color: $selectColor
+
+    &__heading
+        font-size: 24px
+        line-height: 29px
+        color: $selectColor
+
+    &__nav
+        display: flex
+        list-style-type: none
+
+    &__list
+        &:not(:last-child)::after
+            content: '/'
+            margin-left: 8px
+            margin-right: 8px
+        &:last-child a
+            color: $selectColor
+            font-weight: bold
+.filter-sort
+    display: flex
+    margin-top: 51px
+    margin-bottom: 65px
+
+.filter
+    width: 360px
+    margin-right: 30px
+    position: relative
+    z-index: 1
+
+    &__details
+        padding: 13px 16px 16px
+        box-sizing: border-box
+        position: absolute
+        width: 100%
+
+    &__details[open] .filter__summary
+        color: #ef5b70
+
+    &__details[open] path
+        fill: #ef5b70
+
+    &__details[open]
+        background: #ffffff
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+    &__summary
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+        padding-right: 11px
+
+    &__details-in
+        margin-top: 16px
+
+    &__details-in[open] .filter__heading-in
+        color: #ef5b70
+
+    &__summery-in
+        border-left: 5px solid #ef5b70
+
+    &__heading-in
+        display: block
+        font-size: 14px
+        line-height: 17px
+        color: #6f6e6e
+        padding: 8px 0 11px 11px
+        border-bottom: 1px solid #ebebeb
+
+    &__ul
+        list-style-type: none
+        padding-left: 17px
+        padding-top: 24px
+
+    &__ul_link
+        font-size: 14px
+        line-height: 17px
+        color: #6f6e6e
+        display: block
+        padding-bottom: 11px
+
+    &__summery-in[open]
+        color: #6f6e6e
+
+.size
+    display: flex
+    padding-top: 12px
+    gap: 28px
+
+    &__box
+        position: relative
+        z-index: 1
+
+    &__heading
+        font-size: 14px
+        line-height: 17px
+        color: #6f6e6e
+
+    &__icon:not(:last-child)
+        margin-right: 2px
+
+    &__icon
+        margin-left: 10px
+
+.chekbox
+    border: 1px solid #ebebeb
+    margin-right: 10px
+    margin-left: 10px
+    margin-top: 10px
+
+    &__name
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 16px
+        color: #6f6e6e
+
+    &__bord
+        background: #ffffff
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        width: 79px
+        position: absolute
+        margin-top: 5px
+.pagination
+    margin-top: 48px
+    margin-bottom: 96px
+    display: flex
+    justify-content: center
+
+    &__list
+        display: flex
+        list-style-type: none
+        border: 1px solid #ebebeb
+        padding: 15px 16px
+        gap: 18px
+        background: #ffffff
+        border-radius: 3px
+
+    &__link
+        font-family: Lato
+        font-style: normal
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: #ebebeb
+
+    &__link:hover
+        color: #ef5b70
